@@ -157,7 +157,7 @@ docker run -it \
 ## Hamamatsu — ROS2
 
 ```bash
-cd ~/detector_ros_docker/hammamatsu1/ros2
+cd ~/detector_ros_docker/hammamatsu/ros2
 docker build --no-cache -t hammamatsu_ros2 .
 
 docker run -it \
