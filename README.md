@@ -16,7 +16,7 @@ and **visualisation tools** for:
 - Dose calculators for Sigma50, Hamamatsu & GR1  
 - Multi-sensor compatible spectrum plotting  
 - Network-transparent (DDS cross-container support)
-- Saved spectrum .csv
+- Saved spectrum (.csv)
 ---
 
 ## Installing Docker
@@ -243,4 +243,36 @@ docker run --rm -it \
   spectrum_viz_ros2 \
   ros2 run spectrum_viz spectrum_gui
 ```
+# Notes
+## Spectrums
+Spectrums of the different detectors can be found:
+```bash
+cd ~/rad_logs
+```
+## View messages 
+To view the incoming ros messages first enter the container (tabbing will autofill the containers name)
+```bash
+docker exec -it <tab> bash 
+```
+Source the environments for the different ROS distros rostopic list should confirm topics are visible.
 
+## ROS1 
+```bash
+source /opt/ros/noetic/setup.bash
+rostopic list
+```
+Example for viewing the gr1 cps messages
+
+```bash
+rostopic echo /gr1/cps
+```
+## ROS2
+```bash
+source /opt/ros/humble/setup.bash
+ros2 topic list
+```
+Example for viewing the gr1 cps messages
+
+```bash
+ros2 topic echo /gr1/cps
+```
