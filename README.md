@@ -73,7 +73,7 @@ sudo usermod -aG docker $USER
 Create:
 
 ```
-/etc/udev/rules.d/99-radiation-detectors.rules
+sudo nano /etc/udev/rules.d/99-radiation-detectors.rules
 ```
 
 with:
@@ -108,7 +108,7 @@ sudo udevadm trigger
 ## GR1 — ROS1
 
 ```bash
-cd ~/rad_detector_docker/gr1/ros1
+cd ~/detector_ros_docker/gr1/ros1
 docker build --no-cache -t gr1_ros1 .
 
 docker run -it \
@@ -124,7 +124,7 @@ docker run -it \
 ## GR1 — ROS2
 
 ```bash
-cd ~/rad_detector_docker/gr1/ros2
+cd ~/detector_ros_docker/gr1/ros2
 docker build --no-cache -t gr1_ros2 .
 
 docker run -it \
@@ -141,7 +141,7 @@ docker run -it \
 ## Hamamatsu — ROS1
 
 ```bash
-cd ~/rad_detector_docker/hammamatsu/ros1
+cd ~/detector_ros_docker/hammamatsu/ros1
 docker build --no-cache -t hamamatsu_ros1 .
 
 docker run -it \
@@ -157,7 +157,7 @@ docker run -it \
 ## Hamamatsu — ROS2
 
 ```bash
-cd ~/rad_detector_docker/hammamatsu1/ros2
+cd ~/detector_ros_docker/hammamatsu1/ros2
 docker build --no-cache -t hammamatsu_ros2 .
 
 docker run -it \
@@ -174,7 +174,7 @@ docker run -it \
 ## Sigma50 — ROS1
 
 ```bash
-cd ~/rad_detector_docker/sigma50/ros1
+cd ~/detector_ros_docker/sigma50/ros1
 docker build --no-cache -t sigma50_ros1 .
 
 docker run -it \
@@ -190,7 +190,7 @@ docker run -it \
 ## Sigma50 — ROS2
 
 ```bash
-cd ~/rad_detector_docker/sigma50/ros2
+cd ~/detector_ros_docker/sigma50/ros2
 docker build --no-cache -t sigma50_ros2 .
 
 docker run -it \
@@ -211,7 +211,7 @@ docker run -it \
 ## Visualiser — ROS1
 
 ```bash
-cd ~/rad_detector_docker/viz/ros1
+cd ~/detector_ros_docker/viz/ros1
 docker build --no-cache -t spectrum_viz_ros1 .
 
 xhost +local:docker
@@ -230,7 +230,7 @@ docker run -it \
 ## Visualiser — ROS2
 
 ```bash
-cd ~/rad_detector_docker/viz/ros2
+cd ~/detector_ros_docker/viz/ros2
 docker build --no-cache -t spectrum_viz_ros2 .
 
 xhost +local:docker
